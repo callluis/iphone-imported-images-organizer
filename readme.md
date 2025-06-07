@@ -3,7 +3,7 @@
 ## What it does  
 This script is intended to help iphone and mac users to organize imported pictures. It takes the photos and videos imported from iphone  
 into a folder, and it copies them and rename them by month, so if you want to see all the pictures for a specific month, you don't need   
-to open folder by folder, representing each folder a day.  
+to open folder by folder, representing each folder a day. I would do this manually every six months and would take me a whole day.  
 
 So, as an example (check the name of main folder, check source destination in code), from this:  
 <img src="images/original_files.png" width="500" height="500">  
