@@ -43,8 +43,12 @@ def main():
             month_folder_path = dest_path / month_folder_name
             ensure_dir(month_folder_path)
 
+            # Im sorting the files by creation time, so one picture is next to the other,
+            # don't need to look them up later to match the pictures of the same moment
+            files = sorted(folder.glob("*.*"), key=lambda f: f.stat().st_birthtime)
+
             # Copy and rename each image in the folder
-            for idx, img_file in enumerate(folder.glob("*.*")):
+            for idx, img_file in enumerate(files):
                 if img_file.is_file():
                     ext = img_file.suffix
                     counter = f"{idx+1:03d}"  # 3-digit padded counter
